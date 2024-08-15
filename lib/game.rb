@@ -7,27 +7,35 @@ class Game
     ]
   end
 
+  def display_dashes_row(game_board, arr)
+    arr.length.times do |n|
+      if n == arr.length - 1
+        game_board.concat('---')
+      else
+        game_board.concat('---|')
+      end
+    end
+    game_board.concat("\n")
+  end
+
+  def display_numbers_row(game_board, arr)
+    arr.each_with_index do |elem, idx2|
+      if idx2 == arr.length - 1
+        game_board.concat(" #{elem}")
+      else
+        game_board.concat(" #{elem} |")
+      end
+    end
+    game_board.concat("\n")
+  end
+
   def display_board
     game_board = ''
     @board.each_with_index do |arr, idx1|
-      arr.each_with_index do |elem, idx2|
-        if idx2 == arr.length - 1
-          game_board.concat(" #{elem}")
-        else
-          game_board.concat(" #{elem} |")
-        end
-      end
-      game_board.concat("\n")
-      next if idx1 == 2
+      display_numbers_row(game_board, arr)
+      break if idx1 == @board.length - 1
 
-      3.times do |n|
-        if n == 2
-          game_board.concat('---')
-        else
-          game_board.concat('---|')
-        end
-      end
-      game_board.concat("\n")
+      display_dashes_row(game_board, arr)
     end
     game_board
   end
