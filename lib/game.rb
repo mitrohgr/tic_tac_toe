@@ -18,13 +18,18 @@ class Game
     game_board.concat("\n")
   end
 
+  def display_chars(game_board, elem)
+    if elem.instance_of? Integer
+      game_board.concat('   ')
+    else
+      game_board.concat(" #{elem}")
+    end
+  end
+
   def display_numbers_row(game_board, arr)
     arr.each_with_index do |elem, idx2|
-      if idx2 == arr.length - 1
-        game_board.concat(" #{elem}")
-      else
-        game_board.concat(" #{elem} |")
-      end
+      display_chars(game_board, elem)
+      game_board.concat('|') unless idx2 == arr.length - 1
     end
     game_board.concat("\n")
   end
