@@ -52,4 +52,57 @@ class Game
       end
     end
   end
+
+  def check_for_ltr_diagonal?
+    ltr_diagonal = @board.length.times.map { |e| @board[e][e] }
+    return true if ltr_diagonal.all? { |e| e == 'X' } ||
+                   ltr_diagonal.all? { |e| e == 'O' }
+
+    false
+  end
+
+  def check_for_rtl_diagonal?
+    rtl_diagonal = @board.length.times.map { |e| @board[e][-e - 1] }
+    return true if rtl_diagonal.all? { |e| e == 'X' } ||
+                   rtl_diagonal.all? { |e| e == 'O' }
+
+    false
+  end
+
+  def check_for_diagonals?
+    return true if check_for_ltr_diagonal?
+    return true if check_for_rtl_diagonal?
+
+    false
+  end
+
+  def check_for_columns?
+    @board.transpose.each do |arr|
+      return true if arr.all? { |e| e == 'X' } ||
+                     arr.all? { |e| e == 'O' }
+    end
+    false
+  end
+
+  def check_for_rows?
+    @board.each do |arr|
+      return true if arr.all? { |e| e == 'X' } ||
+                     arr.all? { |e| e == 'O' }
+    end
+    false
+  end
+
+  def won?
+    return true if check_for_rows? ||
+                   check_for_columns? ||
+                   check_for_diagonals?
+
+    false
+  end
+
+  def over?
+    return true if won?
+
+    false
+  end
 end
