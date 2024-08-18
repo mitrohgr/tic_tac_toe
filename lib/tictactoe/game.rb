@@ -45,10 +45,10 @@ class Game
     game_board
   end
 
-  def update_board(char_choice, grid_choice)
-    @board.each_with_index do |arr, idx1|
-      arr.each_with_index do |elem, idx2|
-        arr[idx2] = char_choice if elem == grid_choice
+  def update_board(choice, grid)
+    @board.each do |arr|
+      arr.each_with_index do |elem, idx|
+        arr[idx] = choice if elem == grid
       end
     end
   end
