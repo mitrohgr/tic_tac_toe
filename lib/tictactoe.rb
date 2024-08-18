@@ -14,6 +14,7 @@ class TicTacToe
       grid = gets.chomp.to_i
       @game.update_board(@player.choice, grid)
       puts @game.display_board
+      @player.change_choice
     end
   end
 end
