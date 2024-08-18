@@ -9,5 +9,9 @@ class TicTacToe
 
   def start_game
     puts @game.display_board
+    print 'Enter grid number: '
+    grid = gets.chomp.to_i
+    @game.update_board(@player.choice, grid)
+    puts @game.display_board
   end
 end
