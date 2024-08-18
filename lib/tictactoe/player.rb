@@ -4,4 +4,8 @@ class Player
   def initialize
     @choice = %w[X O].sample
   end
+
+  def change_choice
+    @choice = @choice == 'X' ? 'O' : 'X'
+  end
 end
