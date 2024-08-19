@@ -100,8 +100,15 @@ class Game
     false
   end
 
+  def drawn?
+    @board.flatten.each do |e|
+      return false if e.instance_of? Integer
+    end
+    true
+  end
+
   def over?
-    return true if won?
+    return true if won? || drawn?
 
     false
   end
