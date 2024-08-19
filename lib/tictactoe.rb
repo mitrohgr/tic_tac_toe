@@ -24,7 +24,7 @@ class TicTacToe
     puts ''
   end
 
-  def start
+  def start # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
     puts ''
     puts @game.display_board
     loop do
@@ -63,7 +63,7 @@ class TicTacToe
     @player.restart
   end
 
-  def play
+  def play # rubocop:disable Metrics/MethodLength
     puts 'A Game of Tic Tac Toe!'
     puts ''
     loop do
@@ -82,6 +82,8 @@ class TicTacToe
         restart
       when '3'
         puts 'Exiting the game...'
+      else
+        puts ''
       end
       break if choice == '3'
     end
