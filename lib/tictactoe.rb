@@ -25,5 +25,12 @@ class TicTacToe
 
       @player.change_choice
     end
+
+    case @status
+    when 'won'
+      puts "Player #{@player.choice} wins!"
+    when 'drawn'
+      puts 'Nobody wins!'
+    end
   end
 end
