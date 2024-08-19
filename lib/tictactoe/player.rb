@@ -8,4 +8,8 @@ class Player
   def change_choice
     @choice = @choice == 'X' ? 'O' : 'X'
   end
+
+  def restart
+    @choice = %w[X O].sample
+  end
 end
