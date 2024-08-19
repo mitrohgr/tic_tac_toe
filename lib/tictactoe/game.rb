@@ -8,6 +8,7 @@ class Game
   end
 
   def display_dashes_row(game_board, arr)
+    game_board.concat("\t")
     arr.length.times do |n|
       if n == arr.length - 1
         game_board.concat('---')
@@ -27,6 +28,7 @@ class Game
   end
 
   def display_numbers_row(game_board, arr)
+    game_board.concat("\t")
     arr.each_with_index do |elem, idx2|
       display_chars(game_board, elem)
       game_board.concat('|') unless idx2 == arr.length - 1
@@ -111,5 +113,13 @@ class Game
     return true if won? || drawn?
 
     false
+  end
+
+  def restart
+    @board = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ]
   end
 end
