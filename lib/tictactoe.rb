@@ -8,7 +8,7 @@ class TicTacToe
     @player = Player.new
   end
 
-  def start_game
+  def start
     puts @game.display_board
     loop do
       print 'Enter grid number: '
@@ -31,6 +31,29 @@ class TicTacToe
       puts "Player #{@player.choice} wins!"
     when 'drawn'
       puts 'Nobody wins!'
+    end
+  end
+
+  def play
+    puts 'A Game of Tic Tac Toe!'
+    puts ''
+    loop do
+      puts '  1. Read the rules'
+      puts '  2. Play the game'
+      puts '  3. Exit the game'
+      puts ''
+      print '=> What say you? '
+      choice = gets.chomp
+      case choice
+      when '1'
+        rules
+      when '2'
+        start
+        restart
+      when '3'
+        puts '=> Exiting the game...'
+      end
+      break if choice == '3'
     end
   end
 end
