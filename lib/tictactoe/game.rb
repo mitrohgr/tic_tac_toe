@@ -1,3 +1,8 @@
+# The Game class models the behavior of a single game
+# of Tic-tac-toe. It displays the game board, updates
+# the game board, checks for win conditions like check-
+# ing for matches in rows, column, and diagonals, draw
+# conditions, and restarts the game cleanly.
 class Game
   def initialize
     @board = [
@@ -107,12 +112,6 @@ class Game
       return false if e.instance_of? Integer
     end
     true
-  end
-
-  def over?
-    return true if won? || drawn?
-
-    false
   end
 
   def restart
