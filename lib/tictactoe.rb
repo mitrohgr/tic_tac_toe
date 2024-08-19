@@ -9,11 +9,14 @@ class TicTacToe
   end
 
   def start
+    puts ''
     puts @game.display_board
     loop do
-      print 'Enter grid number: '
+      puts ''
+      print "=> [Player #{@player.choice}] grid no: "
       grid = gets.chomp.to_i
       @game.update_board(@player.choice, grid)
+      puts ''
       puts @game.display_board
       if @game.won?
         @status = 'won'
@@ -26,12 +29,14 @@ class TicTacToe
       @player.change_choice
     end
 
+    puts ''
     case @status
     when 'won'
-      puts "Player #{@player.choice} wins!"
+      puts "=> Yoohoo! Player #{@player.choice} won!"
     when 'drawn'
-      puts 'Nobody wins!'
+      puts '=> Boohoo! That is a draw!'
     end
+    puts ''
   end
 
   def rules
@@ -44,6 +49,11 @@ class TicTacToe
     puts 'USAGE: Each player can choose a position in the 3-by-3 grid to'
     puts '       put their character. The ranges allowed are from 1 to 9.'
     puts ''
+  end
+
+  def restart
+    @game.restart
+    @player.restart
   end
 
   def play
