@@ -34,6 +34,18 @@ class TicTacToe
     end
   end
 
+  def rules
+    puts ''
+    puts 'RULES: In Tic-tac-toe, two players take turns marking the spaces'
+    puts '       in a 3-by-3 grid with X or O. The player who succeeds in'
+    puts '       placing three of their marks in a horizontal, vertical, or'
+    puts '       diagonal row is the winner.'
+    puts ''
+    puts 'USAGE: Each player can choose a position in the 3-by-3 grid to'
+    puts '       put their character. The ranges allowed are from 1 to 9.'
+    puts ''
+  end
+
   def play
     puts 'A Game of Tic Tac Toe!'
     puts ''
