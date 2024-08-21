@@ -5,6 +5,12 @@ A Tic-tac-toe game on the Command Line
 
 ![Screen cast of Tic-tac-toe](./img/demo/demo.gif)
 
+<div style="text-align: center;">
+
+[![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://replit.com/@mitrohgr/tictactoe?v=1)
+
+</div>
+
 ## General Info
 
 **tic_tac_toe** is the [fifth project](https://www.theodinproject.com/lessons/ruby-tic-tac-toe) in the [Ruby Course](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby) from the [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails) path in the [The Odin Project](https://www.theodinproject.com/about).
