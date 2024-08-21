@@ -15,6 +15,8 @@ A Tic-tac-toe game on the Command Line
 
 **tic_tac_toe** is the [fifth project](https://www.theodinproject.com/lessons/ruby-tic-tac-toe) in the [Ruby Course](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby) from the [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails) path in the [The Odin Project](https://www.theodinproject.com/about).
 
+Here, I create a command line version of the popular game, Tic-tac-toe. In this game, two players take turns marking the spaces in a 3-by-3 grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
+
 ## Technologies
 
 + ***CLI***
