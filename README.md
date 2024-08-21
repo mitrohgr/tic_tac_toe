@@ -1,5 +1,5 @@
 # tic_tac_toe
-A Tic-tac-toe game on the Command Line
+A Game of Tic-tac-toe on the CLI
 
 ## Demo
 
